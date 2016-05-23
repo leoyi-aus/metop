@@ -1,0 +1,2 @@
+Firebase app ID: METOP
+Facebook app ID: METOP
