@@ -1,0 +1,39 @@
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/ui/0.4.0/firebase-ui-auth.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/0.4.0/firebase-ui-auth.css" />
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="my-login">
+    <template>
+        <style>
+        </style>
+        
+        <paper-material elevation="1">
+            <h1 class="page-title" tabindex="-1">Login</h1>
+        </paper-material>
+        
+        <paper-button toggles raised on-tap="loginLink"><iron-icon icon="face"></iron-icon>Login</paper-button>
+        
+    </template>
+    
+    <script>
+        Polymer({
+            is: "my-login",
+            properties: {
+                
+            },
+            loginLink: function(e){
+                var ref = new Firebase("https://metop.firebaseio.com");
+                ref.onAuth(function(authData) {
+                    if (authData) {
+                        console.log("User " + authData.uid + " is logged in with " + authData.provider);
+                    } else {
+                        console.log("User is logged out");
+                    }
+                });
+            }
+        });
+    </script>
+</dom-module>
