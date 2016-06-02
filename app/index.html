@@ -16,7 +16,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="Polymer Starter Kit">
-  <title>Polymer Starter Kit</title>
+  <title>METOP - PUT YOU ON TOP</title>
 
   <!-- Place favicon.ico in the `app/` directory -->
 
@@ -129,12 +129,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
           <!-- Application name -->
           <div class="middle middle-container">
-            <div class="app-name">Polymer Starter Kit</div>
+            <div class="app-name">METOP</div>
           </div>
 
           <!-- Application sub title -->
           <div class="bottom bottom-container">
-            <div class="bottom-title">The future of the web today</div>
+            <div class="bottom-title">PUT YOU ON TOP</div>
           </div>
         </paper-toolbar>
 
@@ -143,7 +143,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
             
             <section data-route="login" tabindex="-1">
-              <my-login></my-login>
+              <my-login home-url="{{baseUrl}}home"></my-login>
               
             </section>
             
@@ -235,18 +235,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </template>
 
   <!-- build:js scripts/app.js -->
-  
-<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCro2YlhgvzvsiMqNpdmnnpyfuPhPnztPg",
-    authDomain: "metop.firebaseapp.com",
-    databaseURL: "https://metop.firebaseio.com",
-    storageBucket: "project-2751369739138607317.appspot.com",
-  };
-  firebase.initializeApp(config);
-</script>
     
   <script src="scripts/app.js"></script>
   <!-- endbuild-->
